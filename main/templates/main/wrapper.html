@@ -16,20 +16,36 @@
 </head>
 
 <body>
-  <header>
-    {% include "main/includes/header.html" %}
-  </header>
-
-  <content>
-    {% include "main/includes/jumbotron_top.html" %}
-    {% block content %}{% endblock %}
-    {% include "main/includes/jumbotron_center.html" %}
-    {% include "main/includes/jumbotron_bottom.html" %}
-  </content>
-
-  <footer>
-    {% include "main/includes/footer.html" %}
-  </footer>
+  <section>
+    <header>
+      <a href="#" class="logo">New Factory</a>
+      <div class="toggle" onclick='menuToggle()'></div>
+    </header>
+    <div class="glass"></div>
+    <div class="content">
+      <h2>New style...<br><span>Crystal clear</span></h2>
+    </div>
+    <video src="/static/main/video/mountain.mp4" autoplay muted loop></video>
+    <ul class="sci">
+      <li style="--i:1"><a href="https://www.facebook.com/NewFactory.ca">Facebook</a></li>
+      <li style="--i:2"><a href="https://twitter.com/NewFactory_ca">Twitter</a></li>
+      <li style="--i:3"><a href="https://www.instagram.com/NewFactory.ca/">Instagram</a></li>
+    </ul>
+    <ul class="navigation">
+      <li style="--i:1"><a href="#">Home</a></li>
+      <li style="--i:2"><a href="#">Projects</a></li>
+      <li style="--i:3"><a href="#">About</a></li>
+      <li style="--i:4"><a href="#">Contact</a></li>
+    </ul>
+  </section>
+  <script type="text/javascript">
+    function menuToggle(){
+      const toggleMenu = document.querySelector('.toggle');
+      toggleMenu.classList.toggle('active');
+      const section = document.querySelector('section');
+      section.classList.toggle('active');
+    }
+  </script>
 </body>
 
 </html>

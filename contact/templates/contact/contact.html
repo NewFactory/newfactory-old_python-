@@ -1,0 +1,16 @@
+{% extends 'main/wrapper.html' %}
+{% block title %}Contact{% endblock %}
+{% block content %}
+<main>
+  <div class="container mt-5">
+    <form method="post">
+      {% csrf_token %}
+      {{ form.name }}<br>
+      {{ form.email }}<br>
+      {{ form.message }}<br>
+      <button type="submit" class="button">Submit</button>
+      <span>{{ error }}</span>
+    </form>
+  </div>
+</main>
+{% endblock %}

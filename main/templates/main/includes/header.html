@@ -1,15 +1,14 @@
 {% block header %}
 <div class="header">
   <div class="header_logo">
-    <object type="image/svg+xml" data="/static/main/img/logo.svg">Your browser does not support SVGs</object>
-    <h1>New Factory</h1>
+    <a href="{% url 'main:main' %}">New Factory</a>
   </div>
   <div class="heder_spot">
   </div>
   <div class="header_menu_item">
-    <h3>projects</h3>
-    <h3>contact</h3>
-    <h3>about</h3>
+    <a href="#">projects</a>
+    <a href="{% url 'main:about' %}">about</a>
+    <a href="{% url 'contact:contact' %}">contact</a>
   </div>
 </div>
 {% endblock %}
