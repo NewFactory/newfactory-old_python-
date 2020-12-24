@@ -35,12 +35,14 @@ header {
 }
 header .logo {
   position: relative;
-  font-size: 2em;
   color: #fff;
   text-transform: uppercase;
   font-weight: 700;
   text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
   transition: 0.5s;
+  font-size: 2vw;
+  line-height: 0.55em;
+
 }
 header .toggle {
   position: relative;
@@ -81,7 +83,7 @@ header .toggle:before {
   position: absolute;
   top: 0;
   left: 0;
-  width: 5%;
+  width: 7%;
   height: 100%;
   backdrop-filter: blur(15px);
   z-index: 1;
@@ -89,6 +91,12 @@ header .toggle:before {
   transition: 0,5;
   transition-delay: 1s;
 }
+/* section .content_post {
+  width: 100%;
+  backdrop-filter: blur(20px);
+  box-shadow: 10px 0 15px rgba(0, 0, 0, 0.5);
+  transition-delay: 0s;
+} */
 section.active .glass {
   width: 100%;
   backdrop-filter: blur(20px);
@@ -196,6 +204,9 @@ section .navigation li a:hover {
 @@media (max-width:991px) {
   header {
     padding: 20px;
+  }
+  header .logo a {
+    font-size: 18vw;
   }
   section .sci {
     bottom: 20px;

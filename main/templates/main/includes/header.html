@@ -1,14 +1,6 @@
 {% block header %}
-<div class="header">
-  <div class="header_logo">
-    <a href="{% url 'main:main' %}">New Factory</a>
-  </div>
-  <div class="heder_spot">
-  </div>
-  <div class="header_menu_item">
-    <a href="#">projects</a>
-    <a href="{% url 'main:about' %}">about</a>
-    <a href="{% url 'contact:contact' %}">contact</a>
-  </div>
-</div>
+<header>
+  <a href="{% url 'main:main' %}" class="logo">New Factory</a>
+  <div class="toggle" onclick='menuToggle()'></div>
+</header>
 {% endblock %}
