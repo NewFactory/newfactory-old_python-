@@ -9,7 +9,7 @@ def contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('main:main')
+            return redirect('main:index')
         else:
             error = 'Form not correct'
 
